@@ -7,10 +7,10 @@ def index(request):
     return HttpResponse("A views index funcionou, Wow!")
 
 def sobre(request):
-    return HttpResponse("Sistema 1.0 desenvolvido por mim mesmo.")
+    return HttpResponse("<h1>Sistema 1.0 desenvolvido por mim mesmo.</h1>")
 
 def contato(request):
-    return HttpResponse("")
+    return HttpResponse("Está é a página de contato.")
 
 def ajuda(request):
-    return HttpResponse("")
+    return HttpResponse("Está é a página de ajuda.")
