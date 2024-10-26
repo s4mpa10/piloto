@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('sobre/', views.sobre, name='sobre'),
     path('contato/', views.entre_em_contato, name='entre_em_contato'),
-    # path('ajuda', views.ajuda, name='ajuda'),
 ]
+
+
