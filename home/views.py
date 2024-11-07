@@ -22,22 +22,26 @@ def perfil(request,usuario):
     return render(request,"perfil.html",{'perfil':usuario})
 
 def diasemana(request,dia):
+    dia_semana = ""
+    numero = 0
     if dia == 1:
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Domingo'})
+        dia_semana = 'Domingo'
     elif dia == 2:
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Segunda-Feira'})
+        dia_semana = 'Segunda-Feira'
     elif dia == 3:     
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Terça-Feira'})
+        dia_semana = 'Terça-Feira'
     elif dia == 4:
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Quarta-Feira'})
+        dia_semana = 'Quarta-Feira'
     elif dia == 5:  
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Quinta-Feira'})
+        dia_semana = 'Quinta-Feira'
     elif dia == 6:  
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Sexta-Feira'})
+        dia_semana = 'Sexta-Feira'
     elif dia == 7:  
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Sábado'})
+        dia_semana = 'Sábado'
     else:  
-        return render(request, "diasemana.html", {'num':dia, 'dia':'Error 900: Dia inválido.'})    
+        dia_semana = 'Inválido' 
+    
+    return render(request, "diasemana.html", {'num':dia, 'dia':dia_semana})
     
 def home_cadWeb(request):
     return render(request, "home_cadWeb.html")
