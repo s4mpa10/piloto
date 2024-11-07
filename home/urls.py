@@ -21,7 +21,11 @@ from . import views
 urlpatterns = [
     path('', views.index, name="index"),
     path('sobre/', views.sobre, name='sobre'),
-    path('contato/', views.entre_em_contato, name='entre_em_contato'),
+    path('contato/', views.contato, name='contato'),
+    path('item/<int:id>/', views.exibir_item, name='exibir_item'),
+    path('perfil/<str:usuario>/', views.perfil, name='perfil'),
+    path('diasemana/<int:dia>/', views.diasemana, name='diasemana'),
+    path('home_cadWeb/', views.home_cadWeb, name='home_cadWeb'),
 ]
 
 
