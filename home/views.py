@@ -16,7 +16,7 @@ def contato(request):
     return render(request,'contato.html')
 
 def exibir_item(request, id):
-    return render(request,"exibir_item.html",{'id':id})
+    return render(request,"item.html",{'id':id})
 
 def perfil(request,usuario):
     return render(request,"perfil.html",{'perfil':usuario})
