@@ -23,7 +23,6 @@ def perfil(request,usuario):
 
 def diasemana(request,dia):
     dia_semana = ""
-    numero = 0
     if dia == 1:
         dia_semana = 'Domingo'
     elif dia == 2:
