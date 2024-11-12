@@ -25,7 +25,7 @@ urlpatterns = [
     path('item/<int:id>/', views.exibir_item, name='item'),
     path('perfil/<str:usuario>/', views.perfil, name='perfil'),
     path('diasemana/<int:dia>/', views.diasemana, name='diasemana'),
-    path('home_cadWeb/', views.home_cadWeb, name='home_cadWeb'),
+    path('produtos/', views.produtos, name='produtos'),
 ]   
 
 

@@ -42,8 +42,15 @@ def diasemana(request,dia):
     
     return render(request, "diasemana.html", {'num':dia, 'dia':dia_semana})
     
-def home_cadWeb(request):
-    return render(request, "home_cadWeb.html")
+def produtos(request):
+    contexto = {
+        'lista': [
+            {'id':1, 'nome':'Notebook', 'preco':'2.500,00'},
+            {'id':2, 'nome':'Monitor', 'preco':'500,00'},
+            {'id':3, 'nome':'Teclado', 'preco':'80,00'},
+        ],
+    }
+    return render(request, 'produto/lista.html', contexto)
 
     
     
