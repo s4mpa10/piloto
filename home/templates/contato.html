@@ -4,6 +4,10 @@
 
 {% block conteudo %} 
 
-    <h1>Entre em contato conosco: contato@example.com</h1>
+    <form method = "post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
 
 {% endblock %}
