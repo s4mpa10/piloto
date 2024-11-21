@@ -4,13 +4,14 @@
 
 {% block conteudo %} 
 
-    <button type="button" onclick="location.href='{% url 'form_produto' %}'" class="btn btn-primary">Novo Produto</button>
+    <button type="button" onclick="location.href='{% url 'form_produto' %}'" class="btn btn-primary">Novo Produto</button> <br><br>
     <table class="table table-bordered table-hover">
         <thead class="thead-dark"> 
             <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Valor (R$)</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,11 @@
                 <td>{{item.id}}</td>
                 <td>{{item.nome}}</td>
                 <td>{{item.preco}}</td>
+                <td>
+                    <button type="button" onclick="location.href='{% url 'detalhes_produto' item.id %}'" class="btn btn-info">Detalhes</button>
+                    <button type="button" onclick="location.href='{% url 'editar_produto' item.id %}'" class="btn btn-warning">Alterar</button>
+                    <button type="button" onclick="location.href='{% url 'excluir_produto' item.id %}'" class="btn btn-danger">Excluir</button>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
