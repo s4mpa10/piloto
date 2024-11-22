@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title_page %} Formulário de Produto {% endblock %}
+{% block title_page %} Formulário do Produto: {{item}}{% endblock %}
 
 {% block conteudo %} 
 
@@ -8,6 +8,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-secondary">Cancelar</button>
     </form>
 
 {% endblock %}

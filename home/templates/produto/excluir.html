@@ -3,7 +3,11 @@
 {% block title_page %}  Confirmação de Exclusão {% endblock %}
 
 {% block conteudo %} 
+    
+    <script>
+        alert("Deseja excluir o produto com id: {{item}} ?")
+    </script>
+    <h2>Você está removendo o Produto ID {{item}}</h2>
 
-    <h2>Você está removendo o Produto ID {{id}}</h2>
 
 {% endblock %}
