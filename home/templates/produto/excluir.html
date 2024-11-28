@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title_page %}  Confirmação de Exclusão {% endblock %}
+{% block title_page %} Confirmação de Exclusão {% endblock %}
 
+<<<<<<< HEAD
 {% block conteudo %} 
     
     <h2>Você está removendo o Produto ID {{item}}</h2>
 
+=======
+{% block conteudo %}
+
+<h2>Você está removendo o Produto ID {{item}}</h2>
+
+<script>
+
+    // const userResponse = confirm("Deseja excluir o produto com id: {{item}} ?");
+    window.confirm("Você deseja continuar?");
+
+</script>
+
+>>>>>>> c863042c6e1149e92539bfeaa27865a3a23e0f10
 {% endblock %}
